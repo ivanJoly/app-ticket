@@ -33,7 +33,4 @@ io.on('connection', (cliente) => {
         });
 
     })
-
-    
-
 });

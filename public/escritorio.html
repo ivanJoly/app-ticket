@@ -6,17 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa de Colas</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="container">
-    <h1>Escritorio</h1>
-    <h4>Atendiendo a <small>....</small></h4>
+<body>
+    <main>
+        <div class="container escritorio">
+            <div class="escritorio-container">
+                <div class="profile-data">
+                    <div class="profile-data-container">
+                        <div class="profile-img">
+                            <img src="assets/profile.jpg" alt="">
+                        </div>
 
-    <button class="btn btn-primary">
-        Atender siguiente ticket
-    </button>
+                        <div class="separador"></div>
+
+                        <div class="name-container">
+                            <h3 class="subtitulo">Nombre:</h3>
+                            <p class="texto-central">Nicolas Bondancia</p>
+                        </div>
+
+                        <div class="mail-container">
+                            <h3 class="subtitulo">Mail:</h3>
+                            <p class="texto-central">nbondancia@espaciosalud.com.ar</p>
+                        </div>
+
+                        <div class="usuario-container">
+                            <h3 class="subtitulo">Uid usuario:</h3>
+                            <p class="texto-central">225687487</p>
+                        </div>
+
+                        <div class="posicion-container">
+                            <h3 class="subtitulo">Posicion:</h3>
+                            <p class="texto-central">Atencion al cliente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nuevo-turno">
+                    <div class="nuevo-turno-container">
+                        <h1 class="titulo">Escritorio n° <span >5</span></h1>
+                        <p class="texto-central">
+                            Ya accedio al panel del escritorio, lea atentamente el siguiente texto para informarse y llevar de la manera correcta el trabajo.
+                        </p>
+                        <p class="texto-central">
+                            Cuando ingresa por primera vez debe asegurarse que sus datos que se encuentran a la izquierda son correctos. Una vez verficado esto, puede presionar el boton de atender ticket, de esta manera va a conectar su escritorio a un ticket generado anteriormente.
+                        </p>
+                        <p class="texto-central">
+                            Una vez hecho click el sistema le indicara que ticket fue tomado, o en su defecto si no existe un ticket generado aun.
+                        </p>
+                        <div class="ticket">
+                            <p class="texto-central">Atendiendo al ticket <strong></strong></p>
+                            <button class="btn">Atender ticket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="js/libs/jquery.min.js"></script>
     <script src="socket.io/socket.io.js"></script>

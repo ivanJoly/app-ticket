@@ -5,34 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa de Colas</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Sistema de tickets</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="container">
-    <h1>Programa de Colas</h1>
-
-    <div class="row">
-        <div class="col-6">
-
-            <a class="btn btn-primary" href="publico.html">Pantalla publica</a>
-            <a class="btn btn-secondary" href="nuevo-ticket.html">Crear Tickets</a>
-
+<body>
+    <main>
+        <div class="container index">
+            <header>
+                <h1 class="titulo tickets">Sistema de tickets</h1>
+                <div class="separador"></div>
+                <p class="texto-central">Esta pantalla principal es la que permite ver la división que existe en la app, para poder ingresar a cada elemento distinto que se puede utilizar en la misma y asi acceder a la opcion adecuada.</p>
+            </header>
+            <div class="opciones-container">
+                <div class="publica">
+                    <div class="publica-container">
+                        <h3 class="subtitulo">Pantalla de turnos</h3>
+                        <div class="separador"></div>
+                        <p class="texto-central">Es la pantalla que permite a los usuarios ver la situación de los turnos en tiempo real, ya que al estar integrado con Socket io, las interacciones con el backend son en real time.</p>
+                        <a href="publico.html" class="btn">Ingresar</a>
+                    </div>
+                </div>
+                <div class="nuevo-ticket">
+                    <div class="nuevo-ticket-container">
+                        <h3 class="subtitulo">Pantalla de creacion de turnos</h3>
+                        <div class="separador"></div>
+                        <p class="texto-central">En esta pantalla se encuentra en el ingreso de la institución y es donde los usuarios puede obtener sus nuevos tickets de turno para así esperar a ser asistido por alguna persona.</p>
+                        <a href="nuevo-ticket.html" class="btn">Ingresar</a>
+                    </div>
+                </div>
+                <div class="atencion-cliente">
+                    <div class="descripcion">
+                        <div class="descripcion-container">
+                            <h3 class="subtitulo">Atencion al cliente</h3>
+                            <div class="separador"></div>
+                            <p class="texto-central">Es la pantalla que vera aquella persona que asistirá a los usuarios, y es donde se pueden atender esos turnos, que se vera reflejado de manera instantánea en la pantalla publica.<br>A esta pantalla se accede ingresando a un escritorio en particular.</p>
+                        </div>
+                    </div>
+                    <div class="seleccion">
+                        <div class="seleccion-container">
+                            <a class="btn item-seleccion " href="escritorio.html?escritorio=1">Escritorio 1</a>
+                            <a class="btn item-seleccion" href="escritorio.html?escritorio=2">Escritorio 2</a>
+                            <a class="btn item-seleccion" href="escritorio.html?escritorio=3">Escritorio 3</a>
+                            <a class="btn item-seleccion" href="escritorio.html?escritorio=4">Escritorio 4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="col-6">
-            <form action="escritorio.html">
-                <input name="escritorio" type="number" class="form-control" placeholder="Escritorio" autofocus required>
-
-                <br>
-                <button type="submit" class="btn btn-primary">
-                    Ingresar
-                </button>
-            </form>
-        </div>
-    </div>
-
+    </main>
 </body>
 
 </html>

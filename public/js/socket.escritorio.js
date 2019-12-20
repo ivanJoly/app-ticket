@@ -10,12 +10,11 @@ if ( !searchParams.has('escritorio')){
 }
 
 var escritorio = searchParams.get('escritorio');
-var label = $('small');
+var label = $('strong');
 
 $('h1').text('Escritorio: ' + escritorio);
 
 $('button').on('click', function(){
-
 
     socket.emit('atenderTicket', { escritorio: escritorio}, function(resp){
         console.log(resp);
@@ -26,7 +25,7 @@ $('button').on('click', function(){
             return;
         }
 
-        label.text(' el ticket numero: ' + resp.numero);
+        label.text(resp.numero);
     })
 
 })
